@@ -4,7 +4,7 @@
       <meta charset="UTF-8">
       <title>Spring Shop Online</title>
       <link rel="stylesheet" type="text/css" th:href="@{/style.css}" />
-      <th:block th:include="/_header"></th:block>
+      <th:block th:include="_header"></th:block>
    </head>
    <style>
    	.box {
@@ -16,7 +16,7 @@
    </style>
    <body>
       
-      <th:block th:include="/_menu"></th:block>
+      <th:block th:include="_menu"></th:block>
       
       
   
@@ -89,7 +89,7 @@
       
       
        
-      <th:block th:include="/_footer"></th:block>
+      <th:block th:include="_footer"></th:block>
        
    </body>
 </html>
