@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wasserver
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: was
+  template:
+    metadata:
+      labels:
+        app: was
+    spec:
+      containers:
+      - image: 343531455648.dkr.ecr.ap-northeast-2.amazonaws.com/ana-test-shop:was
+        name: was
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            cpu: 200m
+            memory: 300Mi
